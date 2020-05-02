@@ -9,4 +9,10 @@ class UsersController extends AppController
     $users = $this->Users->find('all');
     $this->set(compact('users'));
   }
+
+  public function view($id = null)
+  {
+    $user = $this->Users->get($id);
+    $this->set(compact('user'));
+  }
 }

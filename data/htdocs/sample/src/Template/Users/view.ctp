@@ -20,12 +20,12 @@ $this->assign('title', "$user->family_name $user->given_name さん");
       <td><?= h($user->given_name) ?></td>
     </tr>
     <tr>
-      <th scope="row">Eメール</th>
-      <td><?= h($user->email) ?></td>
+      <th scope="row">性別</th>
+      <td><?= h($this->Gender->convertToManOrWomanFrom($user->gender)) ?></td>
     </tr>
     <tr>
-      <th scope="row">性別</th>
-      <td><?= h($user->gender) ?></td>
+      <th scope="row">Eメール</th>
+      <td><?= h($user->email) ?></td>
     </tr>
     <tr>
       <th scope="row">電話番号</th>

@@ -2,7 +2,7 @@
 $this->assign('title', "$user->family_name $user->given_name さん");
 ?>
 
-<h1 class="text-center mt-3">
+<h1>
   ユーザー詳細
 </h1>
 <table class="table mt-3">
@@ -37,8 +37,6 @@ $this->assign('title', "$user->family_name $user->given_name さん");
     </tr>
   </tbody>
 </table>
-<a href="<?php echo $this->Url->build(['action'=>'index']); ?>" class="btn btn-primary">
+<a href="<?php echo $this->Url->build(['action'=>'index']); ?>" class="btn btn-primary btn-raised">
   ユーザ一覧へ
 </a>
-<ul>
-</ul>

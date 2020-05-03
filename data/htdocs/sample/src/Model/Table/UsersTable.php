@@ -24,7 +24,12 @@ class UsersTable extends Table
       ->notEmpty('phone')
       ->requirePresence('phone')
       ->notEmpty('email')
-      ->requirePresence('email');
+      ->requirePresence('email')
+      ->add('email',[ 'email_unique' => [
+            'rule' => 'validateUnique',
+            'provider' => 'table',
+            'message' => 'そのEメールはすでに使用されています'
+        ]]);
     return $validator;
   }
 }

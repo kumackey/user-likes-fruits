@@ -2,3 +2,19 @@ h1 {
   margin-top: 0.75em;
   text-align: center;
 }
+
+.error-message {
+  margin-left: 100px;
+  color: tomato;
+}
+
+.message{
+  text-align: center;
+  padding: 5px;
+  color: green;
+  background: lavender;
+}
+
+.hidden {
+  display: none;
+}

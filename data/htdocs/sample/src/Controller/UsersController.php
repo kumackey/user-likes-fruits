@@ -30,4 +30,19 @@ class UsersController extends AppController
     }
     $this->set(compact('user'));
   }
+
+  public function edit($id = null)
+  {
+    $user = $this->Users->get($id);
+    if ($this->request->is(['post', 'patch', 'put'])) {
+      $user = $this->Users->patchEntity($user, $this->request->data);
+      if ($this->Users->save($user)) {
+        $this->Flash->success('ユーザ情報を編集しました');
+        return $this->redirect(['action'=>'index']);
+      } else {
+        $this->Flash->error('ユーザ情報の編集に失敗しました');
+      }
+    }
+    $this->set(compact('user'));
+  }
 }

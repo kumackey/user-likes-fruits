@@ -45,4 +45,18 @@ class UsersController extends AppController
     }
     $this->set(compact('user'));
   }
+
+  public function delete($id = null)
+  {
+    $user = $this->Users->get($id);
+    if ($this->request->is(['post', 'delete'])) {
+      if ($this->Users->delete($user)) {
+        $this->Flash->success('ユーザを削除しました');
+        return $this->redirect(['action'=>'index']);
+      } else {
+        $this->Flash->error('ユーザの削除に失敗しました');
+      }
+    }
+    $this->set(compact('user'));
+  }
 }

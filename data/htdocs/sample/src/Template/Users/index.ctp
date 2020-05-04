@@ -19,7 +19,7 @@ $this->assign('title', 'ユーザ一覧');
   <tbody>
     <?php foreach ($users as $user) : ?>
       <tr>
-        <th scope="row">ID</th>
+        <th scope="row"><?= h($user->id) ?></th>
         <td>
           <?= $this->Html->link("$user->family_name $user->given_name", ['action'=>'view', $user->id]); ?>
         </td>

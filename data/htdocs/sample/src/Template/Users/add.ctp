@@ -63,6 +63,7 @@ $this->assign('title', 'ユーザ作成');
         </div>
         <?= $this->Form->button('作成', ['class' => 'btn btn-raised btn-success']); ?>
         <?= $this->Form->end(); ?>
+        <?= $this->Html->link('ユーザ一覧', ['action'=>'index'], ['class' => ['btn', 'btn-raised', 'btn-primary']]); ?>
       </div>
     </div>
   </div>

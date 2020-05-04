@@ -37,6 +37,6 @@ $this->assign('title', "$user->family_name $user->given_name さん");
     </tr>
   </tbody>
 </table>
-<a href="<?php echo $this->Url->build(['action'=>'index']); ?>" class="btn btn-primary btn-raised">
-  ユーザ一覧へ
-</a>
+<?= $this->Html->link('ユーザ一覧', ['action'=>'index'], ['class' => ['btn', 'btn-raised', 'btn-primary']]); ?>
+<?= $this->Html->link('編集', ['action'=>'edit', $user->id], ['class' => ['btn', 'btn-raised', 'btn-warning']]); ?>
+<?= $this->Html->link('削除', ['action'=>'delete', $user->id], ['class' => ['btn', 'btn-raised', 'btn-danger']]); ?>

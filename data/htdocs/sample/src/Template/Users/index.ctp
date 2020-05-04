@@ -36,3 +36,5 @@ $this->assign('title', 'ユーザ一覧');
     <?php endforeach ?>
   </tbody>
 </table>
+
+<?= $this->Html->link('ユーザ作成', ['action'=>'add'], ['class' => ['btn', 'btn-raised', 'btn-primary']]); ?>

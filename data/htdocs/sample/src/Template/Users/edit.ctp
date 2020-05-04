@@ -63,7 +63,12 @@ $this->assign('title', 'ユーザ情報の編集');
         </div>
         <?= $this->Form->button('編集', ['class' => 'btn btn-raised btn-warning']); ?>
         <?= $this->Form->end(); ?>
+        <?= $this->Html->link('ユーザ一覧', ['action'=>'index'], ['class' => ['btn', 'btn-raised', 'btn-primary']]); ?>
+        <?= $this->Html->link('詳細', ['action'=>'view', $user->id], ['class' => ['btn', 'btn-raised', 'btn-success']]); ?>
+        <?= $this->Html->link('削除', ['action'=>'delete', $user->id], ['class' => ['btn', 'btn-raised', 'btn-danger']]); ?>
       </div>
     </div>
   </div>
 </div>
+
+
